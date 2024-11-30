@@ -31,7 +31,27 @@ public class ArrayUtility<Array extends Object>{
    }
 
    public Array getMostCommonFromMerge(Array[] arrayToMerge){
-       return null;
+       Array CommonElement = null;
+       int maxCount = 0;
+
+       for (Array element: array){
+           int count = countDuplicatesInMerge(arrayToMerge, element);
+
+           if (count > maxCount){
+               CommonElement = element;
+               maxCount = count;
+           }
+       }
+
+       for (Array element: arrayToMerge){
+           int count = countDuplicatesInMerge(array, element);
+
+           if (count > maxCount){
+               CommonElement = element;
+               maxCount = count;
+           }
+       }
+       return CommonElement;
 
    }
 
