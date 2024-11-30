@@ -56,11 +56,25 @@ public class ArrayUtility<Array extends Object>{
    }
 
    public int getNumberOfOccurrences(Array valueToEvaluate){
-       return 0;
+       int count = 0;
+
+       for (Array element: array){
+           if (element.equals(valueToEvaluate)){
+               count++;
+           }
+       }
+       return count;
    }
 
    public Array[] removeValue(Array valueToRemove){
-       return null;
+       List<Array> arrayList = new ArrayList<>();
+
+       for (Array element: array){
+           if (!element.equals(valueToRemove)){
+               arrayList.add(element);
+           }
+       }
+       return arrayList.toArray(Arrays.copyOf(array, arrayList.size()));
    }
 
 }
