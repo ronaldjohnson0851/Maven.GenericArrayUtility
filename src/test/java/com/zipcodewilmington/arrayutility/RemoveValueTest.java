@@ -1,6 +1,6 @@
 package com.zipcodewilmington.arrayutility;
 
-import com.zipcodewilmington.UnitTestingUtils;
+import static com.zipcodewilmington.arrayutility.UnitTestingUtils.assertArrayEquality;
 import org.junit.Test;
 
 /**
